@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class AccoutService {
-  private BASE_URL = environment.url
+  private BASE_URL = environment.production
   constructor(private http:HttpClient) { }
 
   getAllAccount(){
