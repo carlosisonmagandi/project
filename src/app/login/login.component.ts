@@ -42,7 +42,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     //if logout will directly got to login page 
     this.getAll()
-    this.hardCodedAuthentication.logout(); 
+    this.hardCodedAuthentication.logout();
+
     console.log(this.selectedUsername)
     console.log(this.selectedPassword)
 
@@ -52,28 +53,13 @@ export class LoginComponent implements OnInit {
     this.accountService.getAllAccount().subscribe(
       response=>{
         console.log(response)
-      
         this.accountList=response;
-        this.newData['records']=response
-        
-
+        this.newData['records']=response     
         let myJSON = JSON.stringify(response);
-        
-
         console.log(this.accountList)
-
-
-        //let newData: Array<any> = new Array<any>();
-       // this.newData.push(myJSON);
-
-       
       }
     )
   }
-
-      
-
- 
 
 deleteAcc(id){
   this.accountService.deleteAccount(id).subscribe(
@@ -83,7 +69,7 @@ deleteAcc(id){
     
     })
 }
-
+//fetch the value of hidden input element
 @ViewChild('usernameInputVal') usernameInputVal!: ElementRef;
 @ViewChild('passwordInputVal') passwordInputVal!: ElementRef;
 selectedUsername='';
@@ -114,17 +100,13 @@ selectedPassword = '';
     
   }
   
-
 // authentication
-
-
 authenticate(selectedUsername,selectedPassword){
-  // console.log('before ' + this.isUserLoggedIn());
    console.log('test of selected username')
    console.log(this.selectedUsername)
    console.log(this.selectedPassword)
    
-    if (selectedUsername === this.selectedUsername && this.selectedPassword == this.selectedPassword ) {
+    if (selectedUsername === this.selectedUsername && selectedPassword == this.selectedPassword ) {
       sessionStorage.setItem('authenticaterUser', selectedUsername);
       console.log('after ' + this.hardCodedAuthentication.isUserLoggedIn());
 

@@ -21,6 +21,7 @@
 			<div class="card-body" >
 				<form >
 					<div *ngFor="let account of accountList; index as i">
+						<!-- ngIf to display only one record from database -->
 						<div *ngIf="i<1">
 							<div class="input-group form-group">
 								<div class="input-group-prepend">
@@ -67,18 +68,6 @@
 								
 							</div>
 							
-							<!-- authorization option -->
-							<!-- <select id="roles"  class="form-control" name="accountRole" [(ngModel)]="accountRole">
-								<option value="Admin" >Admin</option>
-								<option value="Staff">Staff</option>
-								<option value="mercedes">Other</option>
-								
-					 		</select> -->
-							<!-- <select   [(ngModel)]="accountSelected">
-								<option  [selected]="true" >Admin</option>
-								
-								
-							</select> -->
 							
 
 							<div class="row align-items-center remember">

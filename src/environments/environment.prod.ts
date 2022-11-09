@@ -1,5 +1,5 @@
 
 export const environment = {
   production: true,
-  url:'https://angular-intech-app-heroku.herokuapp.com/'
+  url:"http://angular-app.ap-southeast-1.elasticbeanstalk.com"
 };
