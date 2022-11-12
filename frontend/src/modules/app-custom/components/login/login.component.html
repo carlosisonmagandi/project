@@ -9,9 +9,9 @@
 				<form >
 					<div>
 							<div class="input-group form-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fas fa-user"></i></span>
-								</div>
+								<!-- <div class="input-group-prepend">
+									<span class="input-group-text"><i class="glyphicon glyphicon-user"></i></span>
+								</div> -->
 								<input 
 								type="text" 
 								class="form-control" 
@@ -19,10 +19,11 @@
 								name="username" 
 								[(ngModel)]="username">
 							</div>
+							<br>
 							<div class="input-group form-group">
-								<div class="input-group-prepend">
+								<!-- <div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-key"></i></span>
-								</div>
+								</div> -->
 								<input 
 								type="password" 
 								class="form-control" 
@@ -30,12 +31,14 @@
 								name="password" 
 								[(ngModel)]="password">
 							</div>
-
+							<br>
 							<div class="row align-items-center remember">
 								<input type="checkbox">Remember Me
 							</div>
+							<br>
 							<div class="form-group">
 								<input 
+								style="float:right"
 								type="button" 
 								value="Login" 
 								class="btn float-right login_btn"

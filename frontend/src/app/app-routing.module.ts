@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountSettingsComponent } from '@modules/app-custom/components/account-setting/account-settings.component';
 import { ActivityLogsComponent } from '@modules/app-custom/components/activity-logs/activity-logs.component';
+import { NgbdTableComplete } from '@modules/app-custom/components/activity-logs/LOGS/table-complete';
 import { LoginComponentCustom } from '@modules/app-custom/components/login/login.component';
 import { RouteGuardService } from '@modules/app-custom/service/route-guard.service';
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
     {path:'', component: LoginComponentCustom},
     {path:'login', component: LoginComponentCustom},
     {path:'account-setting', component: AccountSettingsComponent,canActivate:[RouteGuardService]},
-    {path:'activity-logs', component:ActivityLogsComponent,canActivate:[RouteGuardService]},
+    // {path:'activity-logs', component:ActivityLogsComponent,canActivate:[RouteGuardService]},
+    {path:'activity-logs',component:NgbdTableComplete,canActivate:[RouteGuardService]},
     {
         path: 'charts',
         loadChildren: () =>
